@@ -21,7 +21,7 @@ function setup() {
 	
 
 
-	side1=createSprite(width/2, height-40,200,20);
+	side1=createSprite(width/2, height-50,200,30);
 	side1.shapeColor="red";
 	side2=createSprite(300, height-90,20,100);
 	side2.shapeColor="red";
@@ -44,7 +44,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(200 , 200 , 5 , {restitution:0.4, isStatic:true});
+	packageBody = Bodies.circle(200 , 200 , 5 , {restitution:0.4, isStatic:false});
 	World.add(world, packageBody);
 
  
@@ -83,12 +83,7 @@ function draw() {
 	   text("You Delivered The Package!!",200,300);
    }
 
-   if(packageSprite.isTouching(groundSprite)){
-  
-   textSize(30);
-   fill("red");
-   text("You didn't deliver the package",200,300);
-}
+   
   
   drawSprites();
   
